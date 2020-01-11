@@ -1,0 +1,1429 @@
+/*! HTML5 Boilerplate v5.2.0 | MIT License | https://html5boilerplate.com/ */
+
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html {
+    //color: #222;
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+@-ms-viewport{
+  width: device-width;
+}
+
+/*
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
+ * These selection rule sets have to be separate.
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+    vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+    resize: vertical;
+}
+
+/* ==========================================================================
+   Browser Upgrade Prompt
+   ========================================================================== */
+
+.browserupgrade {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+html {
+	//font-family: 'Arial', sans-serif;
+	//font-family: 'Merriweather', serif;	
+	//font-family: 'Titillium Web', sans-serif;
+	font-family: 'Open Sans', sans-serif;
+	
+} 
+
+/*hyperlinks and inner links*/
+a {
+	color:#6B69B5;
+	text-decoration:none;
+	font-weight:bold;
+}
+
+a :visited {
+	//color:#5D88BA;
+	color:#6B69B5;
+}
+
+
+.clickable-token {
+cursor:pointer;
+}
+
+.svg-link {
+	//fill:#5D88BA;
+	fill:#6B69B5;
+}
+
+
+/********************CONTAINER AND INTERFACE ITEMS STYLING***********************/
+
+.document-about,
+.headliner
+
+ {
+	color:#666666;	
+	font-weight:normal;
+}
+
+.headliner,
+.reference-list  {
+	background:#efefef; 
+	width:100%;
+	//margin-top:3%;
+	padding-top:3%;
+	//padding-bottom:3%;
+}
+
+.headliner {
+	margin-top:120px;
+}
+
+/*this single div sets the width of the entire page*/
+.headline-supporting-data {
+	width:100%;
+	margin-top:2%;
+}
+
+.footer {
+	margin-top:5%;
+}
+
+.page-header {
+	color:#666666;	
+	font-weight:normal;
+}
+
+
+.page-header  {
+	//background:#efefef; 
+	width:100%;
+	margin-top:3%;
+	//padding-top:3%;
+}
+
+
+.annotated-reference .source {
+	font-weight:bold;
+	color:#333333;
+}	
+
+.annotated-reference .annotation {
+	color:#777777;
+}	
+
+.no-indent {
+  list-style-position: inside;
+  padding-left: 10%;
+}
+
+.colored-list li {
+    list-style:none;
+    margin:0 0 20px 0;
+}
+
+.colored-list li:before {
+    content: "";
+    position:relative;
+    left: -10px;
+    display:inline-block;
+    width:1.25em;
+    height:1.25em;
+    border-radius:50%
+}
+
+.colored-list .black:before {background-color:#3a3129;}
+.colored-list .grey:before {background-color:#999999;}
+.colored-list .light:before {background-color:#cccccc;}
+.colored-list .green:before {background-color:#64B269;}
+.colored-list .lightgreen:before {background-color:#509f56;}
+.colored-list .waterblue:before {background-color:#577fb4;}
+
+
+.colored-list .purple:before {background-color:#8E7EBF;}
+.colored-list .darkpurple:before {background-color:#5F547F;}
+.colored-list .brown:before {background-color:#8C7A5E;}
+.colored-list .darkbrown:before {background-color:#4c4136;}
+
+
+.colored-list .lightblue:before {background-color:#d1c2ff;}
+.colored-list .knwsagreen:before {background-color:#aecc39;}
+.colored-list .knwsablue:before {background-color:#19a8d8;}
+
+
+.flexbox-hcenter-vcenter {		
+   
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;        
+        //horizontal
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;        
+        //vertical
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;  
+                   
+        -webkit-flex-wrap: wrap; /* Safari 6.1+ */
+        flex-wrap: wrap;
+}
+
+
+/*basic panel*/
+.flex-panel {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+   
+    /*horizontal*/
+   -webkit-box-pack: space-around;
+   -ms-flex-pack: space-around;
+   -webkit-justify-content: space-around;
+   justify-content:  space-around;
+   
+    -webkit-box-align: top;
+    -ms-flex-align: top;
+    -webkit-align-items: top;
+    align-items: top; 
+
+	padding:1.5%;
+	
+    //wrap
+   -webkit-flex-flow: wrap;
+  	flex-flow: wrap;
+}
+
+.flex-panel-vcenter {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+   
+    /*horizontal*/
+   -webkit-box-pack: space-around;
+   -ms-flex-pack: space-around;
+   -webkit-justify-content: space-around;
+   justify-content:  space-around;
+   
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center; 
+
+	padding:1.5%;
+	
+    //wrap
+   -webkit-flex-flow: wrap;
+  	flex-flow: wrap;
+}
+
+
+.flex-panel-bottom {
+    display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+   
+    /*horizontal*/
+   -webkit-box-pack: space-around;
+   -ms-flex-pack: space-around;
+   -webkit-justify-content: space-around;
+   justify-content:  space-around;
+   //vertical
+    -webkit-box-align: bottom;
+    -ms-flex-align: bottom;
+    -webkit-align-items: bottom;
+    align-items: bottom; 
+	
+	 //wrap
+   -webkit-flex-flow: wrap;
+  	flex-flow: wrap;
+}
+
+
+/*basic row*/
+.flexbox-row {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+   /*horizontal*/
+   -webkit-box-pack: space-between;
+   -ms-flex-pack: space-between;
+   -webkit-justify-content: space-between;
+   justify-content: space-between;
+   /*vertical*/
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center; 
+    //wrap
+   -webkit-flex-flow: no-wrap;
+  	flex-flow: no-wrap;
+}
+
+/*basic row*/
+.flexbox-row-around,
+.flexbox-row-around-w,
+.flexbox-row-around-center  {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+   //horizontal
+   -webkit-box-pack: space-around;
+   -ms-flex-pack: space-around;
+   -webkit-justify-content: space-around;
+   justify-content: space-around;
+   
+    //wrap
+   -webkit-flex-flow: no-wrap;
+  	flex-flow: no-wrap;
+}
+
+.flexbox-row-aound,
+.flexbox-row-around-w {
+	//vertical
+    -webkit-box-align: top;
+    -ms-flex-align: top;
+    -webkit-align-items: top;
+    align-items: top; 
+}
+
+.flexbox-row-around-w {
+	-webkit-flex-flow: wrap;
+  	flex-flow: wrap;
+}
+
+.flexbox-row-around-center {
+   //vertical
+    -webkit-box-align: top;
+    -ms-flex-align: top;
+    -webkit-align-items: top;
+    align-items: top; 
+}
+
+.flexbox-row-tight {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+   //horizontal
+   -webkit-box-pack: left;
+   -ms-flex-pack: left;
+   -webkit-justify-content: left;
+   justify-content: left;
+   //vertical
+    -webkit-box-align: top;
+    -ms-flex-align: top;
+    -webkit-align-items: top;
+    align-items: top; 
+    //wrap
+   -webkit-flex-flow: no-wrap;
+  	flex-flow: no-wrap;
+}
+
+.flexbox-row-top,
+.flexbox-row-bottom  {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+   //horizontal
+   -webkit-box-pack: space-between;
+   -ms-flex-pack: space-between;
+   -webkit-justify-content: space-between;
+   justify-content: space-between; 
+    //wrap
+   -webkit-flex-flow: no-wrap;
+  	flex-flow: no-wrap;
+	 //sets main axis
+   flex-direction: row;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+}
+
+.flexbox-row-bottom-around  {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+   //horizontal
+   -webkit-box-pack: space-around;
+   -ms-flex-pack: space-around;
+   -webkit-justify-content: space-around;
+   justify-content: space-around; 
+    //wrap
+   -webkit-flex-flow: no-wrap;
+  	flex-flow: no-wrap;
+	 //sets main axis
+   flex-direction: row;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+}
+
+.flexbox-row-bottom-sb  {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+   //horizontal
+   -webkit-box-pack: space-between;
+   -ms-flex-pack: space-between;
+   -webkit-justify-content: space-between;
+   justify-content: space-between; 
+    //wrap
+   -webkit-flex-flow: no-wrap;
+  	flex-flow: no-wrap;
+	 //sets main axis
+   flex-direction: row;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+}
+
+
+.flexbox-row-bottom-left  {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+   //horizontal
+   -webkit-box-pack: left;
+   -ms-flex-pack: left;
+   -webkit-justify-content: left;
+   justify-content: left; 
+    //wrap
+   -webkit-flex-flow: no-wrap;
+  	flex-flow: no-wrap;
+}
+
+
+.flexbox-row-top {
+   //vertical
+    -webkit-box-align: top;
+    -ms-flex-align: top;
+    -webkit-align-items: top;
+    align-items: top; 
+}
+
+.flexbox-row-around-top  {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+   //horizontal
+   -webkit-box-pack: space-around;
+   -ms-flex-pack: space-around;
+   -webkit-justify-content: space-around;
+   justify-content: space-around;
+     //vertical
+    -webkit-box-align: top;
+    -ms-flex-align: top;
+    -webkit-align-items: top;
+    align-items: top; 
+   
+    //wrap
+   -webkit-flex-flow: no-wrap;
+  	flex-flow: no-wrap;
+}
+
+.flexbox-row-bottom {
+   //vertical
+    -webkit-box-align: bottom;
+    -ms-flex-align: bottom;
+    -webkit-align-items: bottom;
+    align-items: bottom; 
+}
+
+
+
+
+
+/*changes to column on small screen size*/
+.flexbox-row-to-column {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  
+   //horizontal
+   -webkit-box-pack: left;
+   -ms-flex-pack: left;
+   -webkit-justify-content: left;
+   justify-content:  left;
+   
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center; 
+  
+   -webkit-flex-flow: no-wrap;
+  	flex-flow: no-wrap;
+}
+
+/*this is a horiztonal evenly space list that turns into a column*/
+/*padding is added back below 900px*/
+.flexbox-row-to-column-space-even {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex; 
+  padding:0; 
+   //horizontal
+   -webkit-box-pack: space-around;
+   -ms-flex-pack: space-around;
+   -webkit-justify-content: space-around;
+   justify-content:  space-around;
+   
+   -webkit-flex-flow: no-wrap;
+  	flex-flow: no-wrap;
+}
+
+.flexbox-column,
+.flexbox-column-center,
+.flexbox-column-center-bottom
+ {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  
+    flex-direction: column;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+ 
+  
+   -webkit-flex-flow: no-wrap;
+  	flex-flow: no-wrap;
+}
+
+.flexbox-column {
+   //horizontal
+   -webkit-box-pack: left;
+   -ms-flex-pack: left;
+   -webkit-justify-content: left;
+   justify-content:  left;
+}
+
+.flexbox-column-right {
+   //horizontal
+   -webkit-box-pack: right;
+   -ms-flex-pack: right;
+   -webkit-justify-content: right;
+   justify-content:  right;
+}
+
+.flexbox-column-center { 
+   //horizontal
+   -webkit-box-pack: center;
+   -ms-flex-pack: center;
+   -webkit-justify-content: center;
+   justify-content:  center;
+   
+   -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+ 
+}
+
+
+.flexbox-column-center-sb {  
+	  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  
+     
+   //sets main axis
+   flex-direction: column;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+	
+	//because flex direction is column this is actually vertical (oppposite in other cases)
+   -webkit-box-pack: space-between;
+   -ms-flex-pack: space-between;
+   -webkit-justify-content: space-between;
+   justify-content:  space-between;
+   
+   //because flex direction is column this is actually horizontal
+   -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+	
+	-webkit-flex-wrap: nowrap; /* Safari 6.1+ */
+        flex-wrap: nowrap;
+
+	
+}
+
+.flexbox-column-center-top {  
+	  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  
+     
+   //sets main axis
+   flex-direction: column;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+	
+	//because flex direction is column this is actually vertical (oppposite in other cases)
+   -webkit-box-pack: flex-start;
+   -ms-flex-pack: flex-start;
+   -webkit-justify-content: flex-start;
+   justify-content:  flex-start;
+   
+   //because flex direction is column this is actually horizontal
+   -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+	
+	-webkit-flex-wrap: nowrap; /* Safari 6.1+ */
+        flex-wrap: nowrap;
+
+	
+}
+
+.flexbox-column-center-center {  
+	  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  
+     
+   //sets main axis
+   flex-direction: column;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+	
+	//because flex direction is column this is actually vertical (oppposite in other cases)
+   -webkit-box-pack: center;
+   -ms-flex-pack: center;
+   -webkit-justify-content: center;
+   justify-content: center;
+   
+   //because flex direction is column this is actually horizontal
+   -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+	
+	-webkit-flex-wrap: nowrap; /* Safari 6.1+ */
+        flex-wrap: nowrap;
+
+	
+}
+
+.flexbox-column-center-bottom {
+	 display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  
+     
+   //sets main axis
+   flex-direction: column;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+	
+	//because flex direction is column this is actually vertical (oppposite in other cases)
+   -webkit-box-pack: flex-end;
+   -ms-flex-pack: flex-end;
+   -webkit-justify-content: flex-end;
+   justify-content:  flex-end;
+   
+   //because flex direction is column this is actually horizontal
+   -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+	
+	-webkit-flex-wrap: nowrap; /* Safari 6.1+ */
+        flex-wrap: nowrap;
+}
+
+
+
+.flex-wrapper-top-left {
+		display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;        
+        //horizontal
+        -webkit-box-pack: left;
+        -ms-flex-pack: left;
+        -webkit-justify-content: left;
+        justify-content: left;       
+        //vertical
+        -webkit-box-align: top;
+        -ms-flex-align: top;
+        -webkit-align-items: top;
+        align-items: top;     
+        //wrap
+        -webkit-flex-wrap: wrap; /* Safari 6.1+ */
+        flex-wrap: wrap;
+}
+
+/*********************TYPESETTING START*****************************/
+
+.doc-title {
+	color:#666666;
+	//font-weight:bold;
+	font-size:45px;
+	font-family: 'Merriweather', serif;
+}
+
+.header {
+	color:#666666;
+	//font-weight:bold;
+	font-size:35px;
+	font-family: 'Merriweather', serif;
+
+}
+
+.header-2 {
+	color:#666666;
+	font-weight:bold;
+	font-size:2em;
+	font-family: 'Open Sans', sans-serif;
+}
+
+.header-3 {
+	color:#666666;
+	//font-weight:bold;
+	font-size:1.75em;
+	font-family: 'Open Sans', sans-serif;
+}
+
+.section-header {
+	
+	color:#f6f6f6;
+	//font-weight:bold;
+	font-size:50px;
+	font-family: 'Open Sans', sans-serif;
+	margin-left:2%;
+}
+
+.section-header-bg {
+	width:100%;
+	height:8%;
+	margin-bottom:2%;
+	background:#cccccc;
+}
+
+
+.para {
+	font-size:25px;	
+	color: #777777;
+}
+
+.citation {
+	font-size: 25px;
+}
+
+#footer-content,
+.annotated-reference {
+	font-size:15px;
+}
+
+.annotated-reference {
+	//position:relative;
+	width:90%;
+	margin:2% 0 0 5%;
+}
+
+
+/*********************TYPESETTING END*****************************/
+
+
+/*********************ADAPTIVE DIV CONTAINERS (AND ESCAPES) START*********************/
+
+
+.interface-button-container {
+	margin-left:5%;
+	margin-right:5%;
+	margin-top:2%;
+	margin-bottom:2%;
+	float:right;	
+}
+
+.interface-button-container-center {
+	width:100%;
+    //turn it into flexbox for centering
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;    
+   //horizontal
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center; 	
+}
+
+.interface-button {
+	width:5em;
+	float:right;
+	
+}
+
+.w7em-square {
+	width:7em;
+	height:7em;
+}
+
+.w8em-square {
+	width:8em;
+	height:8em;
+}
+
+
+.w10em-square,
+.w10em-square-constrainH {
+	width:10em;
+	height:10em;
+}
+
+.w15em-square {
+	width:15em;
+	height:15em;
+}
+
+.w50 {
+	width:50%;
+}
+
+.w65 {
+	width:65%;
+}
+
+.lm5 {
+	margin-left:5%;
+}
+
+.w65-lm5 {
+	width:65%;
+	margin-left:5%;
+}
+
+.w80-lm5 {
+	width:80%;
+	margin-left:5%;
+}
+
+.w60-20em {
+	width:60%;
+	height:20em;
+}
+
+.w20em-15em {
+	width:20em;
+	height:15em;
+}
+
+.w25em-15em {
+	width:30em;
+	height:15em;
+}
+
+.w50em-15em {
+	width:50em;
+	height:15em;
+}
+
+.w90 {
+	width:90%;	
+}
+
+header {
+	background: #fff;
+	width: 100%;
+	height: 110px;
+	position: fixed;
+	top: 0;
+	left: 0;
+	/*border-bottom: 4px solid #4C9CF1;*/
+	z-index: 100;
+}
+
+
+
+nav {
+	float: right;
+	height:60px;
+	padding: 20px;		
+}
+
+
+/*originally used a hover menu not great on mobile*/
+/*nav a:hover #menu-icon {
+	//background-color: #444;
+	//border-radius: 4px 4px 0 0;
+}
+*/
+
+nav ul {
+	list-style: none;
+	padding-top:25px;
+	margin:0;
+}
+
+
+nav li {
+	display: inline-block;
+	float: left;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+nav ul .current {
+	color: #2262AD;
+}
+
+#biomassLever,
+#tillageLever,
+#cnLever {
+font-size:.8em;
+}
+
+.svg-full {
+  //display: block;
+  //width: 2500px;
+  background: #4c4136;
+  //height: 1850px;
+  //background: #4c4136 url(../svg/nutrient-cycle-condensed-mockup-2.1-export-1.svg) no-repeat;
+  //background-size: 100%;
+  //background-position:top;
+}
+#nutrient-cycle {
+  //display: block;
+  width: 2500px;
+  //height: 3000px;
+  background: #efefef url(../svg/nutrient-cycle-condensed-mockup-2.3-export-1.svg) no-repeat;
+  background-size: 100%;
+  background-position:top;
+}
+
+#menu-icon {
+	display: none;
+	width:40px;
+	height:40px;
+	background: #64B269 url(../img/menu-icon.png) center;
+}
+
+
+#SOM-main-bullets,
+#ActiveC-main-bullets,
+#StableC-main-bullets {
+	padding-top:1em;
+	padding-left:2em;
+	padding-right:2em;
+}
+
+/*SOM detailed panel content superimposed on svg vector background*/
+/*spacing between panels*/
+
+#ActiveC-panel,
+#StableC-panel,
+ {
+	margin-left:2%;	
+}
+
+#SOM-panel-1 {
+	margin-top:20%;
+	//margin-left:3%;
+	//background:#55493d;			
+}
+#SOM-panel-2,
+#SOM-panel-2-2 {
+	margin-top:1.75%;
+	//margin-left:4%;
+	//background:#55493d;
+	//background:#68594b;		
+}
+#ActiveC-panel {
+	margin-top:2%;
+	//background:#55493d;	
+}
+#StableC-panel {
+	margin-top:9.5%;
+	background:#55493d;
+	//background:#444444;	
+}
+#SOM-panel-header {
+	//margin-top:1.5%;
+	height:5%;
+	width:100%;
+	background:#55493d;
+	padding:0;
+}
+#SOM-panel-body {
+	width:100%;
+	background:#55493d;
+	
+}
+
+
+
+//d3 histogram styling - isolated
+.bar rect {
+  fill: #aecc39;
+}
+
+#bar-green rect {
+  fill: #64B269;
+}
+
+
+#bar-charcoal rect {
+  fill: #999999;
+}
+
+.bar text {
+  fill: #666666;
+  font: 9px sans-serif;
+}
+
+.hideSmallFlex {
+display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+
+
+
+/*********************ADAPTIVE DEFAULTS DIV CONTAINERS END*********************/
+
+
+
+/*********************SCREEN ADAPTATIONS AND MEDIA QUERIES START********************/
+/* Switch to portait mode for smaller screens */
+@media all and (max-width: 930px) {
+
+	.section-header {
+	font-size:45px;
+	margin-left:1%;
+}
+
+	
+	header {
+		position: absolute;
+		background: #fff;
+		width: 100%;
+		height: 110px;
+		top: 0;
+		left: 0;
+		z-index: 100;
+	}
+	
+	#menu-icon {
+		display:inline-block;
+	}
+
+	nav ul { 
+		display: none;
+		position: absolute;
+		//padding: 20px;
+		background: #eaeaea;
+		//border: 5px solid #444;
+		right: 120px;
+		top: 100px;
+		width: 100%;
+		//border-radius: 4px 0 4px 4px;
+
+	}
+
+	/*
+	nav li {
+		text-align: left;
+		width: 100%;
+		padding: 2% 0;
+		margin: 0;
+	}
+	
+	
+	nav li:nth-child(even) {background: #efefef;}
+	nav li:nth-child(odd) {background:#eaeaea;}
+
+	nav:hover ul {
+		display: block;
+	}   	*/
+   	
+.flexbox-row-to-column,
+.flexbox-row-to-column-space-even  {
+  flex-direction: column;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;    
+} 
+
+/*backfill for default padding we don't want on wider screens*/
+.flexbox-row-to-column-space-even {
+	padding-left:40px;	
+}
+
+.flex-panel {
+	/*padding:1%;*/
+}
+
+.w50,
+.w65	{
+	width:80%;
+}	
+.w60-20em {
+	width:80%;	
+	height:10em;
+}
+.w65-lm5 {
+	width:80%;
+	margin-left:5%;
+}
+
+.w20em-15em,
+.w25em-15em,
+.w50em-15em {
+	width:100%;	
+}
+
+.w8em-square {
+		width:5em;
+		height: 5em;
+}
+
+.w10em-square {
+		width:8em;
+		height: 8em;
+}
+
+.w10em-square-constrainH {
+	height:6em;
+	width:8em;
+}
+
+
+
+
+/****FONT ADAPT TYPESETTING FOR SMALLER SCREENS*********/
+.doc-title {
+	font-size:35px;
+}
+
+.header {
+	font-size:20px;
+}
+
+.header-2 {
+	font-size:1.8em;
+}
+
+.header-3 {
+	font-size:1.2em;
+}
+
+
+#footer-content,
+.annotated-reference {
+	font-size: 15px; 
+}
+.para {
+	font-size: 18px; 
+}
+
+.hideSmallFlex {
+	display:none;
+
+}
+
+
+/*****************************************************/
+
+.interface-button-container {
+	width:100%;
+    //turn it into flexbox for centering
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;    
+   //horizontal
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center; 	
+}	
+
+#toolbar a {
+	margin-left:0;
+}
+
+
+}
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Hide visually and from screen readers:
+ */
+ 
+.hidden {
+    display: none !important;
+}
+
+/*
+ * Hide only visually, but have it available for screen readers:
+ * http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ */
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+/*
+ * Extends the .visuallyhidden class to allow the element
+ * to be focusable when navigated to via the keyboard:
+ * https://www.drupal.org/node/897638
+ */
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+/*
+ * Hide visually and from screen readers, but maintain layout
+ */
+
+.invisible {
+    visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+    /* Style adjustments for viewports that meet the condition */
+}
+
+@media print,
+       (-webkit-min-device-pixel-ratio: 1.25),
+       (min-resolution: 1.25dppx),
+       (min-resolution: 120dpi) {
+    /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid the additional HTTP request:
+   http://www.phpied.com/delay-loading-your-print-css/
+   ========================================================================== */
+
+@media print {
+    *,
+    *:before,
+    *:after {
+        background: transparent !important;
+        color: #000 !important; /* Black prints faster:
+                                   http://www.sanbeiji.com/archives/953 */
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    /*
+     * Don't show links that are fragment identifiers,
+     * or use the `javascript:` pseudo protocol
+     */
+
+    a[href^="#"]:after,
+    a[href^="javascript:"]:after {
+        content: "";
+    }
+
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    /*
+     * Printing Tables:
+     * http://css-discuss.incutio.com/wiki/Printing_Tables
+     */
+
+    thead {
+        display: table-header-group;
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}

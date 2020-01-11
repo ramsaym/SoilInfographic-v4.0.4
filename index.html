@@ -1,0 +1,751 @@
+﻿<!doctype html>
+
+
+<html class="no-js" lang="">
+    <head>
+      <meta
+Content-Type="application/xhtml+xml">        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Soil Health Infographic</title>
+		<link rel="apple-touch-icon" sizes="57x57" href="img/apple-icon-57x57.png">
+		<link rel="apple-touch-icon" sizes="60x60" href="img/apple-icon-60x60.png">
+		<link rel="apple-touch-icon" sizes="72x72" href="img/apple-icon-72x72.png">
+		<link rel="apple-touch-icon" sizes="76x76" href="img/apple-icon-76x76.png">
+		<link rel="apple-touch-icon" sizes="114x114" href="img/apple-icon-114x114.png">
+		<link rel="apple-touch-icon" sizes="120x120" href="img/apple-icon-120x120.png">
+		<link rel="apple-touch-icon" sizes="144x144" href="img/apple-icon-144x144.png">
+		<link rel="apple-touch-icon" sizes="152x152" href="img/apple-icon-152x152.png">
+		<link rel="apple-touch-icon" sizes="180x180" href="img/apple-icon-180x180.png">
+		<link rel="icon" type="image/png" sizes="192x192"  href="img/android-icon-192x192.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="96x96" href="img/favicon-96x96.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+		<link rel="manifest" href="img/manifest.json">
+		<meta name="msapplication-TileColor" content="#ffffff">
+		<meta name="msapplication-TileImage" content="img/ms-icon-144x144.png">
+        <meta name="author" content="KNWSA">
+        <meta name="description" content="A digital document highlighting research on various aspects of soil health.">
+        <meta content="width=device-width, initial-scale=1" name="viewport" />
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+        <!-- Place favicon.ico in the root directory -->
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/swiper.min.css">
+        <!--<link rel="stylesheet" href="css/swiper.css">-->
+        <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+        <!--fonts-->
+       <link href="https://fonts.googleapis.com/css?family=Merriweather:900|Open+Sans" rel="stylesheet">
+       <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans" rel="stylesheet">
+    </head>
+    <body>
+     	<!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.
+            </p>
+  		<![endif]-->
+
+	<header>
+		<div style="width:100%;" class="flexbox-row">
+			<img style="margin: 1%" width="90em" src="svg/knorth-logo.svg">
+			<span style="margin-left:3%;margin-right:2%; display:inline;" class="doc-title">Soil Health</span>
+			<nav>
+				<a href="#" id="menu-icon"></a>
+				<ul>
+					<li><a href="#SoilHealth" class="current">Background</a></li>
+					<li><a href="#KNWSA-Data">Project</a></li>
+					<li><a href="#Conclusions">Conclusions</a></li>
+					<li><a href="#References">References</a></li>
+				</ul>
+			</nav>
+		<div>
+
+
+	</header>
+	<!--Main content wrapper-->
+	<div style="min-width:540px;background-color:#ededed;" id="main-content-wrapper">
+
+		<div class="headliner flex-wrapper-top-left" id="som-background">
+				<!--basic chunk	-->
+				<div  style="margin-bottom:2%;" class="flexbox-row class w80-lm5">
+					<div >
+						<img src="svg/soil_health_logo.svg" />
+					</div>
+					<div class="w80-lm5 para"><span class="header">The health of soil </span>can analyzed using the
+					<span style="font-weight:bold;color:#64b269;"> biological</span>, <span style="font-weight:bold;color:#444444;">physical</span>, and
+					<span style="font-weight:bold;color:#8e7ebf;">chemical</span> properties. <span style="font-weight:bold;">Nutrient cycling</span> and <span style="font-weight:bold;">soil organic matter (SOM)</span> are central concepts. </div>
+				</div>
+				<!-- end basic chunk-->
+
+		</div>
+
+
+	<!--SOM Background section-->
+	<div class="flex-wrapper-top-left" id="som-background">
+			<!--Collapsible Section Header-->
+			<div class="flexbox-row section-header-bg">
+			<a id="SoilHealth"></a>
+			<div style="width:100%;height:100%;"><span class="section-header">Background</span>
+			</div>
+				<!--@interface buttons start-->
+				<div class="interface-button-container">
+					<div class="interface-button clickable-token" id="g-somfractions-token" style="display:none;">
+						<img width="100%" height="100%" style="vertical-align:top;" src="svg/plus.svg"/>
+					</div>
+					<div class="interface-button clickable-token close-button" id="g-somfractions-close">
+						<img width="100%" height="100%" style="vertical-align:top;" src="svg/minus.svg"/>
+					</div>
+				</div>
+				<!--@interface buttons end-->
+			</div>
+			<!--END Collapsible Section Header-->
+
+		<!--Main content-->
+		<div id="somfractions-content"  class="headline-supporting-data flex-wrapper-top-left"  >
+
+			<!--SECTION Header-->
+			<!--SVG/CSS id  hook-->
+
+				<!--basic chunk	-->
+				<div  style="margin-bottom:2%;" class="flexbox-row class w80-lm5">
+					<div class="w7em-square">
+						<!--practical make up-->
+						<canvas id="om-fractions-graph"></canvas>
+					</div>
+					<div class="w80-lm5 para"><span class="header">Soil organic matter </span> (SOM) is a diverse mixture of living, decaying, and stable organic materials in different biological, chemical, and physical states. </div>
+				</div>
+				<!-- end basic chunk-->
+				<!--nutrient cycle svg bg integrated with html-->
+				<div id="nutrient-cycle" width="100%" height="100%">
+					<!--<div class="flexbox-row-bottom">	-->
+						 <!--3 panel run for total, active and stable-->
+						<div class="flexbox-row-bottom-sb" style="color:#aaaaaa; font-size:.85em; margin-left:4%; width:96%; margin-top:43%;">
+							 <!--small panel under root zoom-->
+
+							 <div id="SOM-panel-1" style="width:30%;"class="flexbox-column-center-bottom">
+								<!--<div class="flexbox-column-center" style="width:90%;">
+									<div style="margin-bottom:15%;">
+										<span style="color:#bbbbbb;" class="header-3">OM Composition</span>
+									</div>
+									<div class="w7em-square">
+										<canvas id="som-c-graph"></canvas>
+									</div>
+									<ul class="colored-list no-indent">
+										<li class="black">Carbon</li>
+										<li class="light">Oxygen, hydrogen</li>
+										<li class="purple">Essential nutrients</li>
+									</ul>
+								</div>	-->
+
+								<div style="margin-top:5%" class="flexbox-column-center" >
+									<div><span style="color:#bbbbbb;" class="header-3">H<sub>2</sub>O <span style="color:#999999;">in SOM</span></span></div>
+									<div class="w10em-square">
+										<canvas id="waterHoldingIncrease-graph"></canvas>
+									</div>
+									<ul style="margin:0; font-size:.85em; color:#cdcdcd;" class="w80 colored-list">
+										<li class="waterblue">Litre per % OM</li>
+									 </ul>
+								</div>
+
+
+							</div>
+
+
+							<div id="SOM-panel-2" style="width:20%;" class="flexbox-column-center-sb" >
+								<div  id="SOM-panel-2-top">
+									<div class="flexbox-column-center">
+										<div><span style="color:#bbbbbb;" class="header-3">N <span style="color:#999999;">in SOM</span></span></div>
+										<div class="w10em-square-constrainH">
+											<canvas id="soil-n-value-graph"></canvas>
+										</div>
+										<ul style="margin:-4%; font-size:.85em; color:#cdcdcd;" class="w80 colored-list">
+											<li class="purple">lb/a <a href="#Burton-SoilNSupply-2016"> Burton, 2016.</a> </li>
+										</ul>
+									</div>
+								</div>
+								<div id="SOM-panel-2-bottom">
+
+
+									<div style="margin-top:5%" class="flexbox-column-center">
+										<div><span style="color:#bbbbbb;" class="header-3">CEC <span style="color:#999999;">of SOM</span></span></div>
+										<div class="w10em-square">
+										<canvas id="cec-graph"></canvas>
+										</div>
+										<ul style="margin:0; font-size:.85em; color:#cdcdcd;" class="w80 colored-list">
+											<li class="purple">Meq</li>
+										</ul>
+									</div>
+
+
+								</div>
+
+
+							</div>
+
+
+							<div id="ActiveC-panel"  class="flexbox-column-center-sb"  style="margin-top:5%; width:50%;">
+								<!-- row 1-->
+								<div class="flexbox-row-bottom" style="">
+									<div style="margin-right:2%;" class="flexbox-column-center-center">
+
+										<span style="display:block;text-align:center;color:#bbbbbb;" class="header-3">20% <span style="color:#999999;">Active  </span></span>
+
+									</div>
+
+									<div style="margin-top:4%;" class="w8em-square">
+										<canvas id="c-pools-graph"></canvas>
+									</div>
+
+									<div style="margin-right:2%;" class="flexbox-column-center-center">
+										<span style="display:block;text-align:center;color:#bbbbbb;" class="header-3">80% <span style="color:#999999;">Stable  </span></span>
+
+										</ul>
+									</div>
+
+								</div>
+								<!-- row2-->
+								<div class="flexbox-row-bottom-around">
+									<!-- text chunk -->
+									<div class="flexbox-column-center-center hideSmallFlex">
+										<span style="display:block;text-align:center;color:#bbbbbb;" class="header-3">Organic <span style="color:#999999;"></br>Carbon  </span></span>
+									</div>
+									<!-- end text chunk -->
+
+									<!-- chart chunk -->
+									<div style="margin-top:5%" class="flexbox-column-center-top">
+										<div><span style="color:#bbbbbb;" class="header-3">C <span style="color:#999999;">in SOM</span></span></div>
+										<div class="w10em-square">
+											<canvas id="carbon-hfs-graph"></canvas>
+										</div>
+										<ul style="margin:0; font-size:.85em; color:#bbbbbb;" class="w80 colored-list">
+											<li class="black">MT/a Carbon</li>
+										</ul>
+									</div>
+									<!-- end chart chunk -->
+
+									<!-- text chunk -->
+									<div class="flexbox-column-center-center">
+										<span style="display:block;text-align:center;color:#bbbbbb;" class="header-3">11MT/a <span style="color:#999999;"></br>per 1%  </span></span>
+									</div>
+									<!-- end text chunk -->
+
+
+								</div>
+
+							</div>
+						</div>
+					<!-- </div>	-->
+				<!--end nutrient cycle-->
+				</div>
+
+
+
+
+
+		<div id="somvalue-content" class="headline-supporting-data flex-wrapper-top-left">
+
+
+
+
+				<div style="margin-top:5%;" class="w80-lm5 para">
+					<span class="header">A sustained cycling</span>  of dead organic residues and living organisms creates a storage and slow release mechanism for carbon and plant nutrients, complementing the rapid availability of fertilizers.
+				</div>
+				<div style="margin-top:3%; width:100%;" class="flexbox-hcenter-vcenter">
+						<div style="width:50%;">
+							<canvas id="minorgrelease-graph"></canvas>
+						</div>
+
+					<ul style="font-size:.85em;" class="colored-list">
+						<!--<li class="purple">Fertilizers are generally highly soluble and immediately plant available. This exposes the bulk of soluble nutrients to loss mechanisms such as nitrate leaching from the point of application until plant uptake. </li>
+				     	<li class="green">Mineralization converts nutrients locked in organic molecules and compounds into plant available nutrients slowly, exposing limited amounts of nutrients to loss mechanisms at any given time. </li>		-->
+						<li class="purple">Fertilizer availability</li>
+						<li  class="green">OM Mineralization release</li>
+					</ul>
+				</div>
+
+        <div style="margin-top:5%;" class="w80-lm5 para">
+					<span class="header">The Carbon:Nitrogen</span> ratio affects whether biological activity is a sink (storage) or a source (release) of plant available nitrogen. Managing organic matter can lead to better control of mineralization and immobilization.
+				</div>
+
+				<div style="margin-top:3%; width:100%;" class="flexbox-hcenter-vcenter">
+						<div style="width:50%;">
+							<canvas id="cn-graph"></canvas>
+						</div>
+					<ul style="font-size:.85em;" class="colored-list">
+						<!--<li class="purple">Nitrogen</li>-->
+						<li  class="black">C:N Ratio</li>
+						<li class="purple">Mineralization</li>
+						<li  class="green">Immobilization</li>
+					</ul>
+				</div>
+
+
+				<div style="margin-top:5%;" class="w80-lm5 para">
+				<span class="header">Manure & compost</span> add <a href="#Nyiraneza-Manure-2009" >organic carbon and nutrients</a> to the soil, fueling both plant growth and the microbial production of long term soil OM.
+				</div>
+				<div style="margin-top:3%; width:100%;" class="flexbox-hcenter-vcenter">
+						<div style="width:50%;">
+							<canvas id="manure-graph"></canvas>
+						</div>
+
+					<ul style="font-size:.85em;" class="colored-list">
+						<li class="black">Organic Carbon</li>
+						<li class="green">Organic Nitrogen</li>
+					</ul>
+				</div>
+
+
+       <div style="margin-top:0%; width:100%;" class="flexbox-row">
+				<div>
+					<img width="100%" height="100%" src="svg/compaction-base-rootPen.svg" />
+				</div>
+        <div style="width:50%;" class="para"><span class="header">Soil porosity </span> effects air, water, and nutrient access by roots and is easily disrupted by heavy traffic on moist soil, tillage, and rain events.</span></div>
+        <!--<ul style="font-size:.85em;" class="colored-list">
+					<li class="black">Larger pores hold air</li>
+					<li class="waterblue">Smaller pores hold water </li>
+
+				</ul>-->
+			</div>
+
+
+
+			<!-- som in detail-->
+			</div>
+
+
+			<!--Management practices-->
+			<div class="flex-wrapper-top-left" id="management-induced">
+
+					<div style="margin-top:5%;" class="w80-lm5 para">
+						<span class="header">Tillage frequency and type</span> have been observed to influence soil carbon, nitrogen and microbial biomass.
+					</div>
+					<div style="margin-top:3%;width:100%;" class="flexbox-row-around">
+							<div style="width:30%" class="flexbox-column-center">
+
+								<span style="color:#666666;" class="header-3"><a id="tillageFrequencyBtn" href="#Angers-RotationActiveCActiveNSoilNSupplyTillage-1999">Frequency</a></span>
+
+								<div class="w10em-square">
+									<canvas id="rotation-labile-om-graph"></canvas>
+								</div>
+								<ul style="font-size:.85em; color:#666666;" class="w80 colored-list">
+									<li class="green">Labile Nitrogen</li>
+									<li  class="black">Labile Carbon</li>
+								</ul>
+							</div>
+
+							<div style="width:30%" class="flexbox-column-center">
+								<span style="color:#666666;" class="header-3"><a id="tillageTypeBtn" href="#Weil_Islam-ConservationTillage-2009">Type</a></span>
+								<div class="w10em-square">
+									<canvas id="active-mb-graph"></canvas>
+								</div>
+								<ul style="font-size:.85em; color:#666666;" class="w80 colored-list">
+									<li class="lightgreen">Active microbial biomass</li>
+									<li class="green">Total microbial biomass</li>
+								</ul>
+							</div>
+
+
+
+					</div>
+
+
+			<!--END management-->
+			</div>
+		<!--END som-detail-->
+		</div>
+		</div>
+	<!--som-background-->
+	<!-- Summary of BG  -->
+	<a id="Conclusions"></a>
+	<div class="headline-supporting-data flex-wrapper-top-left" >
+		<!--Section Header-->
+		<div class="flexbox-row section-header-bg">
+
+		<div style="width:100%;height:100%;"><span class="section-header">Summary</span>
+		</div>
+				<!--@interface buttons start-->
+		<div class="interface-button-container">
+			<div class="interface-button clickable-token" id="g-conclusions-token" style="display:none;">
+				<img width="100%" height="100%" style="vertical-align:top;" src="svg/plus.svg"/>
+			</div>
+			<div class="interface-button clickable-token close-button" id="g-conclusions-close">
+				<img width="100%" height="100%" style="vertical-align:top;" src="svg/minus.svg"/>
+			</div>
+		</div>
+		<!--@interface buttons end-->
+		</div>
+		<!--END Section Header-->
+
+		<div class="flex-wrapper-top-left" id="conclusions-content">
+			<!--<div class="w80-lm5 para" style="margin-top:1%;">
+				<span class="header">Soil health is a long term investment.</span> While there are observable short term gains, it may take several years before measurable productivity gains are evident. Research suggests at least 3-5 years.
+			</div>-->
+			<div style="margin-top:2%;" class="w80-lm5 para">
+					<span class="header">A continuous supply </span> of fresh residues and living roots is necessary to provide <span class="alt-0">active OM for foodweb metabolism</span><span class="alt-1" style="display:none;">food for soil life</span> & build humus. C02 emission limits the amount of biomass retained as stable OM or humus.
+			</div>
+
+
+			<div style="margin-top:3%; width:100%;" class="flexbox-hcenter-vcenter">
+						<!--<div style="height:20em;" >	-->
+						<div style="width:50%;">
+							<canvas id="om-decomp-graph"></canvas>
+						</div>
+					<!--<div style="">
+						<img width="100%" style="vertical-align:top;" height="100%" src="svg/SOM-decomp-curves.svg"/>
+					</div>	-->
+					<ul style="font-size:.85em;" class="colored-list">
+						<!--<li class="green">Added residues, tissues, and root exudates are broken down by various soil organisms. Carbon is converted back into living tissue or lost as C02. </li>
+						<li class="brown">As soil organisms reduce tissues into sand sized particles, carbon and nutrients are further recycled and released as food sources. Microbial biomass will begin to decrease until new residues are added. </li>
+						<li class="black">Stable organic matter, or humus, is the portion of original organic inputs that are broken down to a point where they are not easily decomposed further. This process happens slowly over several years. </li>-->
+						<li  class="lightgreen">Microbial biomass</li>
+						<li  class="green">Active Carbon</li>
+						<li class="purple">Nitrogen Release</li>
+						<li  class="black">Stable Carbon</li>
+
+					</ul>
+			</div>
+
+			<div style="width:100%;" class="flexbox-column-center">
+				<div style="margin-top:2%;">
+					 <svg width="500" height="30">
+						<text x="0" y="50%" dominant-baseline="middle" text-anchor="start" fill="#efefef">1Mt/a</text>
+						<rect x="0" y="10" width="100%" height="40%" style="fill:#aaa;" />
+						<text x="0" y="50%" dominant-baseline="middle" text-anchor="end" fill="#efefef">5Mt/a</text>
+						<g id="biomassLever">
+							<rect x="190" width="60" height="100%" style="fill:#666;" />
+							<!--this 1px prevents a gap between rectangles-->
+							<rect x="249" width="60" height="100%" style="fill:#666;" />
+							<text x="250" y="50%" dominant-baseline="middle" text-anchor="middle" fill="#efefef">Biomass Return</text>
+						</g>
+					</svg>
+				</div>
+				<div style="margin-top:2%;">
+					<svg width="500" height="30">
+						<rect y="10" width="100%" height="40%" style="fill:#aaa;" />
+						<g id="cnLever">
+							<rect x="190" width="60" height="100%" style="fill:#666;" />
+							<rect x="249" width="60" height="100%" style="fill:#666;" />
+							<text x="250" y="50%" dominant-baseline="middle" text-anchor="middle" fill="#efefef">C/N Ratio</text>
+						</g>
+					</svg>
+				</div>
+				<div style="margin-top:2%;margin-bottom:5%;">
+					<svg width="500" height="30">
+						<rect y="10" width="100%" height="40%" style="fill:#aaa;" />
+						<g id="tillageLever">
+							<rect x="190" width="60" height="100%" style="fill:#666;" />
+							<rect x="249" width="60" height="100%" style="fill:#666;" />
+							<text x="250" y="50%" dominant-baseline="middle" text-anchor="middle" fill="#efefef">Tillage</text>
+						</g>
+					</svg>
+				</div>
+			</div>
+
+
+
+
+
+
+
+
+			<!--<div style="margin-top:3%; width:100%;" class="flexbox-hcenter-vcenter">
+					<div style="width:50%;">
+						<canvas id="sh-payback-graph"></canvas>
+					</div>
+				<ul style="font-size:.85em;" class="colored-list">
+					<li class="green">Increased biological activity</li>
+					<li class="purple">Increased nutrient release and recycling</li>
+					<li class="black">Increased structure and water holding</li>
+				</ul>
+			</div>-->
+		</div>
+
+	</div>
+	<!--End bg summary-->
+
+	<!-- knwsa project data -->
+	<a id="KNWSA-Data"></a>
+	<div class="headline-supporting-data flex-wrapper-top-left" id="knwsa">
+		<!--Section Header-->
+		<div class="flexbox-row section-header-bg">
+
+		<div style="width:100%;height:100%;"><span class="section-header">Our work</span>
+		</div>
+				<!--@interface buttons start-->
+		<div class="interface-button-container">
+			<div class="interface-button clickable-token" id="g-knwsadata-token" style="display:none;">
+				<img width="100%" height="100%" style="vertical-align:top;" src="svg/plus.svg"/>
+			</div>
+			<div class="interface-button clickable-token close-button" id="g-knwsadata-close">
+				<img width="100%" height="100%" style="vertical-align:top;" src="svg/minus.svg"/>
+			</div>
+		</div>
+		<!--@interface buttons end-->
+		</div>
+		<!--END Section Header-->
+
+		<div class="flex-wrapper-top-left" id="knwsadata-content">
+
+			<div style="margin-top:2%;" class="w80-lm5 para">
+				<span class="header">Soil health sampling</span> was carried out by KNWSA staff in cooperation with PEIDAF and local farmers and used in the development of a ratings scale for multiple soil health parameters. </span>
+			</div>
+
+
+			<div style="margin-top:3%; width:100%;" class="flexbox-row-around">
+
+					<div class="flexbox-column-center">
+
+						<div id="soil-health-as" style="width:250px; height: 166px;" ></div>
+						<div style="font-size:1em;" class="w80">Soil Stability</div>
+						<!--<ul style="font-size:1em; " class="w80 colored-list">
+							<li class="black">Soil Structure</li>
+						</ul>-->
+					</div>
+
+					<!--<div style="width:30%" class="flexbox-column-center">
+
+						<div id="soil-health-om" style="width:250px; height: 166px; " ></div>
+						<div style="font-size:1em;" class="w80"> Organic Matter</div>
+						<ul style="font-size:1em; " class="w80 colored-list">
+							<li class="green">Organic Matter</li>
+						</ul>
+					</div>	-->
+
+					<div class="flexbox-column-center">
+
+						<div id="soil-health-activec" style="width:250px; height: 166px; " ></div>
+						<div style="font-size:1em;" class="w80"> Active Carbon</div>
+						<!--<ul style="font-size:1em;" class="w80 colored-list">
+							<li class="green">Active Carbon</a> </li>
+						</ul>	-->
+					</div>
+
+			</div>
+
+
+
+			<div  style="margin-top:2%;" class="w80-lm5 para">
+				<span class="header">Split trial data</span> was collected to assess changes in soil health and/or crop yield associated with residue tillage as a conservation practice for reducing erosion.
+			</div>
+
+			<div style="margin-top:3%; width:100%;" class="flexbox-hcenter-vcenter">
+					<!--<div style="height:20em;" >	-->
+					<div style="width:50%;">
+						<canvas id="knwsa-tillage-graph" ></canvas>
+					</div>
+				<ul style="font-size:.85em;" class="colored-list">
+					<li class="purple">Residue tillage (Revenue $000/a)  </li>
+					<li class="black">Mouldboard plough Revenue $000/a)   </li>
+				</ul>
+			</div>
+		<!-- end knwsa data-->
+		<!-- stub: tie into Angers et al. here to backup relevance of this work and add that it has since been added to a larger dataset, the results of which are conssitent with KNWSA data-->
+		</div>
+
+	</div><!--end knwsa  content-->
+
+
+
+
+
+	<!--References -->
+		<!--Section Header-->
+		<a id="References"></a>
+		<div class="headline-supporting-data flexbox-row section-header-bg">
+		<a id="Conclusions"></a>
+		<div style="width:100%;height:100%;"><span class="section-header">References</span>
+		</div>
+				<!--@interface buttons start-->
+		<div class="interface-button-container">
+			<div class="interface-button clickable-token" id="g-references-token" style="display:none;">
+				<img width="100%" height="100%" style="vertical-align:top;" src="svg/plus.svg"/>
+			</div>
+			<div class="interface-button clickable-token close-button" id="g-references-close">
+				<img width="100%" height="100%" style="vertical-align:top;" src="svg/minus.svg"/>
+			</div>
+		</div>
+		<!--@interface buttons end-->
+		</div>
+		<!--END Section Header-->
+	<div class="reference-list" id="references-content">
+		<div class="annotated-reference" id="Alam-SoilNSupplyGreenManure-2016">
+			<div class="source"> Alam, M.  Z, Lynch, D.H, Sharifi, M., Burton, D. L. & Hammermeister, A. M. (2016): The effect of green manure and organic amendments on potato yield, nitrogen uptake and soil mineral nitrogen, Biological Agriculture & Horticulture.
+			</div>
+			<div class="annotation">This research examined organic nutrient sources and crop sequences in an organic potato rotation. There were no significant yield increases associated with any one rotation and it was concluded that rotational effects on yield would have to be studied over longer periods of time. Municipal solid food waste and paper mill biosolid amendments did significantly increase yields.
+			</div>
+		</div>
+		<div class="annotated-reference" id="Angers-RotationActiveCActiveNSoilNSupplyTillage-1999">
+			<div class="source"><a href=""http://www.nrcresearchpress.com/doi/pdf/10.4141/S98-033 target="_blank">Angers, D. A., Edwards, L. M., Sanderson, J. B., & Bissonnette, N. (1999). Soil organic matter quality and aggregate stability under eight potato cropping sequences in a fine sandy loam of Prince Edward Island. Canadian Journal of Soil Science, 79(3), 411-417. </a>
+			</div>
+			<div class="annotation">This research was conducted on Prince Edward Island in 1999 and focused specifically on potato production. It found that tillage frequency and rotation length affected soil quality, especially for labile organic Carbon and Nitrogen fractions. Aggregate stability followed a similar pattern but was less pronounced than soil organic matter (SOM) Carbon and Nitrogen fractions. Under longer rotations with 30-40% potato frequency (and associated intensive tillage), soil quality and SOM content was higher.
+			</div>
+		</div>
+		<div class="annotated-reference" id="Angers-RotationActiveCActiveNSoilNSupplyTillage-1999">
+			<div class="source"><a href=""http://www.nrcresearchpress.com/doi/pdf/10.4141/S98-033 target="_blank">Angers, D. A., N'dayegamiye, A., & Cote, D. (1993). Tillage-induced differences in organic matter of particle-size fractions and microbial biomass. Soil Science Society of America Journal, 57(2), 512-516. </a>
+			</div>
+			<div class="annotation">This research observed that even in cropping systems that returned little biomass back to the soil that reduced tillage can maintain or increase the labile, or active, fractions of organic matter.
+			</div>
+		</div>
+
+		<div class="annotated-reference" id="Burton-SoilNSupply-2016">
+			<div class="source">Burton, Zebarth, Styles (2016, March). Developing a soil nitrogen test for potato production in Prince Edward Island. Data presented at the PEI Soil and Crop Improvement Association Annual Conference, Summerside, PE.							</div>
+			<div class="annotation">Data collected on Prince Edward Island show substantial variation in soil nitrogen supply across regions and and farms. Potentially mineralizable N ranged from approximately 95kgha-200kg/ha and actual, mineralized N ranged from 30kg/ha - 110kg/ha.
+			</div>
+		</div>
+
+		<div class="annotated-reference" id="Cornell-CEC-2008">
+			<div class="source"><a href="http://nmsp.cals.cornell.edu/publications/factsheets/factsheet22.pdf" target="_blank">Cornell University Cooperative Extension. (2007). Cation Exchange Capacity (CEC). http://nmsp.cals.cornell.edu/publications/factsheets/factsheet22.pdf </a>							</div>
+			<div class="annotation">This fact sheet explains Cation Exchange Capacity (CEC) in detail and the gains in CEC associated with increasing organic matter.
+			</div>
+		</div>
+		 <div class="annotated-reference" id="Cornell-CEC-2008">
+			<div class="source"><a href="http://franklin.cce.cornell.edu/resources/soil-organic-matter-fact-sheet" target="_blank">Cornell University Cooperative Extension. (2008). Soil Organic Matter. http://franklin.cce.cornell.edu/resources/soil-organic-matter-fact-sheet </a>							</div>
+			<div class="annotation">This fact sheet explains the composition of organic matter and the various chemical, physical, and biological benefits it provides.
+			</div>
+		</div>
+		<div class="annotated-reference" id="Cornell-CEC-2008">
+			<div class="source"><a href="http://www.css.cornell.edu/extension/soil-health/manual.pdf" target="_blank">Cornell University. (2016). Comprehensive Assessment of Soil Health. http://www.css.cornell.edu/extension/soil-health/manual.pdf  </a>							</div>
+			<div class="annotation">This is the free online version of the Cornell Soil Health manual. This manual provides explanations of key soil health parameters and how they are measured using Cornell Soil Health testing.
+			</div>
+		</div>
+
+
+
+		<div class="annotated-reference" id="Culman-POXCActiveC-2008">
+				<div class="source">Culman, S. W., Snapp, S. S., Freeman, M. A., Schipanski, M. E., Beniston, J., Lal, R., ... & Lee, J. (2012). Permanganate oxidizable carbon reflects a processed soil fraction that is sensitive to management. Soil Science Society of America Journal, 76(2), 494-504.
+				</div>
+				<div class="annotation">This paper finds that permanganate oxidizable carbon (POXC), or active carbon, is a measurable fraction of organic matter that responds to management. This is the metric for active carbon used in the Cornell Soil Health test.
+				</div>
+		</div>
+		<div class="annotated-reference" id="Dessureault-Rompré-SoilNSupply-2015">
+			<div class="source"><a href="http://www.nrcresearchpress.com/doi/pdf/10.4141/cjss-2014-057" target="_blank">Dessureault-Rompré, J., Zebarth, B. J., Burton, D. L., & Georgallas, A. (2015). Predicting soil nitrogen supply from soil properties. Canadian Journal of Soil Science, 95(1), 63-75.</a>
+			</div>
+			<div class="annotation">
+			This research presents Eastern Canadian data on soil supplied nitrogen and confirms that soil N supply can be predicted by soil properties. The average soil N supply at the 0-15cm depth was 70kg/ha and varied over a similar range to what Burton, Styles, and Zebarth have found of Prince Edward Island.
+			</div>
+		</div>
+		<div class="annotated-reference" id="Dessureault-Rompré-SoilNSupply-2015">
+			<div class="source"><a href="https://www.researchgate.net/publication/258046417_Available_Water_Capacity_and_Soil_Organic_Matter/download" target="_blank">Huntington, Tom G. Available Water Capacity and Soil Organic Matter. In Encyclopedia of Soil Science, Second Edition. Taylor and Francis: New York, Published online: 12 Dec 2007; 139-143.</a>
+			</div>
+			<div class="annotation">
+			 This articles examines the relationship between available water capacity (AWC) of soil and soil organic matter (SOM). Generally speaking, the water holding capacity of soil is measured as the difference between field capacity (max water before saturation) and permanent wilting point (PWP), the % moisture at which plant roots can no longer extract moisture. The paper acknowledges that increased SOM increases soil aggregate formation, aggregate stability, and porosity, resulting in increased water holding. Conversely, when SOM decreases, water holding capacity decreases. Since water capacity varies with soil texture in addition to SOM, there is no singular number reported.
+			</div>
+		</div>
+		<div class="annotated-reference" id="Weil_Islam-ConservationTillage-2009">
+			<div class="source"><a href="https://enst.umd.edu/sites/enst.umd.edu/files/_docs/WeilIslam%202000%20SQ%20indic%20Mid%20Atlantic%20Conserv.pdf" target="_blank">Islam, K., & Weil, R. R. (2000). Soil quality indicator properties-in mid-Atlantic soils as influenced by conservation management. Journal of soil and water conservation, 55(1), 69-78.</a>
+			</div>
+			<div class="annotation" >This research defines conservation management as "some combination of reduced tillage, increased crop diversity more perennial crops, increased crop residue return, increased soil fertility and/or increased application
+of organic amendments." It presents data that demonstrates differences in soil quality associated with conservation management.
+			</div>
+		</div>
+		<div class="annotated-reference" id="Kay-TillagePorosityPhysicalSom-1999">
+			<div class="source"><a href="https://www.researchgate.net/profile/Bert_Vandenbygaart/publication/216804825_Conservation_tillage_and_depth_stratification_of_porosity_and_soil_organic_matter/links/0f31753a0527d4ee8f000000.pdf" target="_blank">Kay, B. D., & VandenBygaart, A. J. (2002). Conservation tillage and depth stratification of porosity and soil organic matter. Soil and Tillage Research, 66(2), 107-118.</a>
+			</div>
+			<div class="annotation">This paper reviews literature on tillage induced changes in physical soil properties such as bulk density and porosity. Comparisons between conventional and no-till are reported on.
+			</div>
+		</div>
+		<div id="Nyiraneza-Manure-2009" class="annotated-reference" id="Nyiraneza-ManureSoilNSupplyRotation-2009">
+			<div class="source"><a href="https://www.researchgate.net/publication/239938132_Dairy_cattle_manure_improves_soil_productivity_in_low_residue_rotation_systems" target="_blank">Nyiraneza, Judith, et al. Dairy cattle manure improves soil productivity in low residue rotation systems. Agronomy journal 101.1 (2009): 207-214.</a>
+			</div>
+			<div class="annotation">This study compared soil with long term manure use (28 yrs) to soil that had no history of manure. Long term manure application significantly increased potentially mineralizable nitrogen (PMN) and preseeding N03-N levels. Water stable macroaggregates were also significantly higher with than without manure. It is concluded mineral NPK alone is not sufficient to maintain or increase soil nutrient status or soil quality.
+			</div>
+		</div>
+		<div class="annotated-reference" id="Ros-SOMFractionsSoilNSupply-2011">
+			<div class="source"><a href="https://whttps://www.researchgate.net/profile/Gerard_Ros2/publication/251496528_Predicting_soil_N_mineralization_relevance_of_organic_matter_fractions_and_soil_properties._Soil_Biol_Biochem/links/00b4951f29c3d88e6f000000.pdf" target="_blank">Ros, G. H., Hanegraaf, M. C., Hoffland, E., & van Riemsdijk, W. H. (2011). Predicting soil N mineralization: Relevance of organic matter fractions and soil properties. Soil Biology and Biochemistry, 43(8), 1714-1722.</a>
+			</div>
+			<div class="annotation">This research finds that various pools of organic matter—hot water extractable Carbon (HWC) and extractable organic Carbon (EOC)—explain soil mineralizable Nitrogen when combined in a multivariate analysis, indicating that increases in total OM and EOM are associated with increases in mineralizable N.
+			</div>
+		</div>
+
+		<div class="annotated-reference" id="Sharifi-SoilNSupplyRotation-2008">
+			<div class="source">Sharifi, M., Zebarth, B. J., Burton, D. L., Grant, C. A., & Porter, G. A. (2008). Organic amendment history and crop rotation effects on soil nitrogen mineralization potential and soil nitrogen supply in a potato cropping system. Agronomy Journal, 100(6), 1562-1572. </div>
+			<div class="annotation">This research finds that organic amendments can increase the soil N supply potential by up to 35%. Management induced changes were detected by several indicators of soil N supply.
+			</div>
+		</div>
+		<div class="annotated-reference" id="Schjonning-SomRotationPhysical-2007">
+			<div class="source">Schjonning, P., Munkholm, L. J., Elmholt, S and Olesen, E. 2007. Organic matter and soil tilth in arable farming: Management makes a difference within 5-6 years. Agriculture, Ecosystems & Environment 122(2):157-172. </div>
+			<div class="annotation">This research concludes that as little as 5-6 years of differentiated soil management significantly affect soil organic carbon fractions, soil structure, and the growth of fungal hyphae. Macroporosity was significantly higher in a cereal rotation that included a grass/clover green manure than it was for a cereal dominated rotation with no manure and a cereal dominated rotation with manure. Both cereal + grass and cereal + manure rotations resisted compaction better.
+			</div>
+		</div>
+		<div class="annotated-reference" id="Soon-RotationTillageFertilizerN-2002">
+			<div class="source">Soon, Y. K. and Clayton, G. W. 2002. Eight years of crop rotation and tillage effects on crop production and N fertilizer use. Canadian Journal of Soil Science. 82: 165172.</div>
+			<div class="annotation">Western Canadian study on a sandy loam soil. Looked at multiple types of rotation over 2 4 year rotation cycles, finding that it wasn’t until the second rotation cycle that the effects of a no-till (NT) system resulted in a decrease in fertilizer requirement and 22% higher wheat yields. This was related to reduced tillage and diversified rotational crops.
+			</div>
+		</div>
+		<div class="annotated-reference" id="StLuce-POMSoilNSupply-2013">
+			<div class="source"><a href="https://www.researchgate.net/profile/Martin_Chantigny/publication/250104325_Dairy_Cattle_Manure_Improves_Soil_Productivity_in_Low_Residue_Rotation_Systems/links/5563298908ae6f4dcc95d2da.pdf" target="_blank">St. Luce, M., Ziadi, N., Zebarth, B. J., Whalen, J. K., Grant, C. A., Gregorich, E, G., Lafond, P., Blackshaw, R. E., Johnson, E. N., O’Donovan, J. T. and Harker, K. N. 2013. Particulate organic matter and soil mineral nitrogen concentrations are good predictors of the soil nitrogen supply to canola following legume and non-legume crops in western Canada. Canadian Journal of Soil Science. 93: 607-620.</a>
+			</div>
+			<div class="annotation">This paper reports that particulate organic matter (POMN) may be a good predictors of Soil N. Because research was conducted on Western Canadian soils, mineral N was also found to explain variation in Soil N but this would not apply in Eastern Canada. The study reports values for potentially mineralizable nitrogen (PMN) ranging from 40-140 mg/Kg which highlights the opportunity for increased nutrient use efficiency in developing reliable predictors of soil nitrogen producing potential.
+			</div>
+		</div>
+		<div class="annotated-reference" id="Thomas-SOMFractionsSoilNSupply-2015">
+			<div class="source"><a href="https://www.researchgate.net/profile/Martin_Chantigny/publication/250104325_Dairy_Cattle_Manure_Improves_Soil_Productivity_in_Low_Residue_Rotation_Systems/links/5563298908ae6f4dcc95d2da.pdf" target="_blank">Thomas, B. W., Whalen, J. K., Sharifi, M., Chantigny, M., & Zebarth, B. J. (2015). Labile organic matter fractions as early‐season nitrogen supply indicators in manure‐amended soils. Journal of Plant Nutrition and Soil Science. Chicago.</a>
+			</div>
+			<div class="annotation">This research focuses on the labile (active) fractions of soil organic matter, finding that particulate organic matter (POM) and hot water extractable organic matter (Hot-WEOM), a smaller labile pool, are good early season indicators of soil N supply in both sandy loam and silty clay soils of the St. Lawrence River lowlands in Quebec.
+			</div>
+		</div>
+		<div class="annotated-reference" id="Vos-NResponseNManagement-2009">
+			<div class="source"><a href="https://www.researchgate.net/profile/Jan_Vos/publication/47817797_Nitrogen_responses_and_nitrogen_management_in_potato/links/02e7e53673c4bb3f8c000000.pdf" target="_blank">Vos, J. (2009). Nitrogen responses and nitrogen management in potato. Potato research, 52(4), 305-317.</a>
+			</div>
+			<div class="annotation" >This paper provides some nitrogen response curves for potato and discusses the challenge of maximizing nitrogen use efficiency (NUE). It also discusses light interception and maximum yield as considerations in matching nitrogen fertilizer to crop uptake.
+			</div>
+		</div>
+		<div style="padding-bottom:1%;" class="annotated-reference" id="Zebarth-NUEFertEfficiency-2004">
+			<div class="source">Zebarth, B. J., Leclerc, Y., & Moreau, G. (2004). Rate and timing of nitrogen fertilization of Russet Burbank potato: Nitrogen use efficiency. Canadian Journal of Plant Science, 84(3), 845-854.
+			</div>
+			<div class="annotation"> This research reports on the nitrogen use efficiency of Russet Burbank potatoes. At moderate levels of inorganic fertilization (120-160 kg/ha), nitrogen use efficiency was 50%. Nitrogen use efficiency decreased with increasing rates of nitrogen fertilizer. As whole plant dry matter increased, harvest index (the ratio of tuber dry matter to plant dry matter) decreased.
+			</div>
+		</div>
+	</div>
+	<!--END Conclusions -->
+
+	<!--Footer-->
+	<div class="footer flex-wrapper-top-left" id="footer-content">
+
+		<a id="About"></a>
+
+		<div style="margin-left:5%;" class="w90 flexbox-row-to-column">
+			<img width="8%" src="svg/knorth-logo.svg"/>
+
+			<div style="margin-left:2%;" class="w90">This document was developed by the Kensington North Watershed Association with support from the Prince Edward Island Department of Agriculture and Fisheries. The data presented here summarizes research findings for the purpose of knowledge mobilization only. While all attempts to preserve accuracy are made, it is not intended to be a replacement for precise, peer-reviewed, scientific data. Links are provided where possible to connect readers to sources.
+			</div>
+
+		</div>
+
+		<div class="w90 flexbox-hcenter-vcenter">
+			<div style="margin-top:1%;"><span style="font-weight:bold;">Last updated:</span> 2019-07-09</div>
+		</div>
+
+	</div>
+	<!--END Footer-->
+	</div>
+	<!--END main content wrapper-->
+
+    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/jquery-1.11.3.min.js"><\/script>')</script>-->
+	<script src="js/jquery-1.11.3.min.js"></script>
+	<script src="js/jcanvas.min.js"></script>
+    <script src="js/plugins.js"></script>
+  	<script src="js/main.js"></script>
+  	<script src="js/TweenMax.js"></script>
+  	<script src="js/TimelineMax.js"></script>
+  	<script src="js/swiper.jquery.min.js"></script>
+  	<script src="js/Draggable.min.js"></script>
+    <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.1.5/Chart.bundle.min.js"></script>-->
+	<script src="js/Chart.bundle.min-stable.js"></script>
+	<script src="js/data/data.js"></script>
+	<script src="js/interface20.js"></script>
+	<script src="https://d3js.org/d3.v4.min.js"></script>
+	<script src="js/d3.histogram.js"></script>
+
+
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+    <!--<script>
+        (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+        function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+        e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+        e.src='https://www.google-analytics.com/analytics.js';
+        r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+        ga('create','UA-XXXXX-X','auto');ga('send','pageview');
+    </script>-->
+
+	</body>
+</html>
